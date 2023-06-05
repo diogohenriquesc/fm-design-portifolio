@@ -1,0 +1,52 @@
+@use "../abstracts/" as *;
+
+.about {
+  text-align: center;
+  margin-bottom: rem(100);
+
+  @include breakpoint(md) {
+    text-align: start;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    gap: rem(10);
+    align-items: center;
+    margin-bottom: rem(120);
+  }
+
+  @include breakpoint(xl) {
+    margin-bottom: rem(88);
+    gap: rem(30);
+  }
+
+  &__text {
+    @include breakpoint(md) {
+      grid-column: 7 / 13;
+    }
+  }
+
+  &__img {
+    margin-bottom: rem(40);
+
+    @include breakpoint(md) {
+      margin-bottom: auto;
+      grid-column: 1 / 7;
+      margin-left: rem(-80);
+    }
+
+    @include breakpoint(xl) {
+      margin-left: auto;
+      grid-column: 1 / 6;
+    }
+  }
+
+  &__description {
+    margin-top: rem(24);
+    margin-bottom: rem(24);
+
+    @include breakpoint(xl) {
+      margin-top: rem(33);
+      margin-bottom: rem(33);
+    }
+  }
+}

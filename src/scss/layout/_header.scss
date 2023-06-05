@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+
+.header {
+  padding-top: rem(16);
+  margin-bottom: rem(32);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint(md) {
+    padding-top: rem(34);
+    margin-bottom: rem(65);
+  }
+}

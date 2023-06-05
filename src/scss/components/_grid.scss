@@ -1,0 +1,82 @@
+@use '../abstracts/' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(24);
+  grid-template-areas: 
+    'gd gd'
+    'uiux apps'
+    'illt illt'
+    'photo photo'
+    'motion motion';
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+      'gd gd uiux apps'
+      'gd gd illt illt'
+      'photo photo motion motion';
+  }
+
+  @include breakpoint(xl) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+      'gd gd uiux apps photo photo'
+      'gd gd illt illt motion motion'
+    ;
+  }
+
+  &__item {
+    padding: rem(24);
+    border-radius: rem(8);
+    color: $clr-neutral-1;
+    font-weight: 700;
+    font-size: rem(24);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    &:nth-of-type(1) {
+      background-color: $clr-solid-1;
+      gap: rem(94);
+      grid-area: gd;
+    }
+
+    &:nth-of-type(2) {
+      background-color: $clr-solid-2;
+      gap: rem(40);
+      grid-area: uiux;
+    }
+
+    &:nth-of-type(3) {
+      background-color: $clr-solid-3;
+      gap: rem(40);
+      grid-area: apps;
+    }
+
+    &:nth-of-type(4) {
+      background-color: $clr-solid-4;
+      gap: rem(16);
+      grid-area: illt;
+    }
+
+    &:nth-of-type(5) {
+      background-color: $clr-solid-5;
+      gap: rem(40);
+      grid-area: photo;
+    }
+
+    &:nth-of-type(6) {
+      background-color: $clr-solid-6;
+      gap: rem(40);
+      grid-area: motion;
+    }
+  }
+
+  &__img {
+    align-self: end;
+  }
+  
+}

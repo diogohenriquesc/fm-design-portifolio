@@ -1,0 +1,50 @@
+@use '../abstracts/' as *;
+
+
+h1, h2 ,h3 {
+  color: $clr-neutral-3;
+  line-height: 1.25;
+}
+
+h1, .fs-l {
+  font-size: rem(36);
+
+  @include breakpoint(md) {
+    font-size: rem(44);
+  }
+
+  @include breakpoint(xl) {
+    font-size: rem(56);
+  }
+}
+
+h2, .fs-m {
+  font-size: rem(26);
+
+  @include breakpoint(md) {
+    font-size: rem(32);
+  }
+
+  @include breakpoint(xl) {
+    font-size: rem(40);
+  }
+}
+
+h3, .fs-s {
+  font-size: rem(24);
+
+  @include breakpoint(md) {
+    font-size: rem(32);
+  }
+}
+
+body {
+  font-family: $ff-main;
+  color: $clr-neutral-2;
+  line-height: 1.5;
+  font-size: rem(16);
+
+  @include breakpoint(md) {
+    font-size: rem(18);
+  }
+}

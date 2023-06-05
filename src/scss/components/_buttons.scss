@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+
+.btn__cta {
+  display: inline-block;
+  padding: rem(8) rem(28);
+  border-radius: rem(28);
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 2;
+  color: $clr-neutral-1;
+  transition: all 250ms ease-in-out;
+
+  &-dark {
+    background-color: $clr-neutral-3;
+
+    &:hover {
+      background-color: $clr-solid-1;
+    }
+  }
+
+  &-light {
+    background-color: $clr-solid-4;
+
+    &:hover {
+      background-color: $clr-solid-2;
+    }
+  }
+}

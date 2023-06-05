@@ -1,0 +1,12 @@
+@use '../abstracts/' as *;
+
+.brand {
+  display: inline-block;
+  width: rem(48);
+  height: rem(48);
+
+  @include breakpoint(md) {
+    width: rem(64);
+    height: rem(64);
+  }
+}
