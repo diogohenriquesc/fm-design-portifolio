@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+.work {
+  text-align: center;
+
+  &__title {
+    margin-bottom: rem(32);
+
+    @include breakpoint(md) {
+      margin-bottom: rem(56);
+    }
+  }
+}
